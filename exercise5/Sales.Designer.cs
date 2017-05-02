@@ -65,11 +65,11 @@
             this.ItemsGV = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.ItemCbCol = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.UnitPriceCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiscountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValueCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPriceCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemCbCol = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -401,31 +401,31 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // ItemCbCol
+            // ValueCol
             // 
-            this.ItemCbCol.HeaderText = "Артикул";
-            this.ItemCbCol.Name = "ItemCbCol";
-            this.ItemCbCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // UnitPriceCol
-            // 
-            this.UnitPriceCol.HeaderText = "Ед. цена";
-            this.UnitPriceCol.Name = "UnitPriceCol";
-            // 
-            // QuantityCol
-            // 
-            this.QuantityCol.HeaderText = "Количества";
-            this.QuantityCol.Name = "QuantityCol";
+            this.ValueCol.HeaderText = "Стойност";
+            this.ValueCol.Name = "ValueCol";
             // 
             // DiscountCol
             // 
             this.DiscountCol.HeaderText = "Отстъпка";
             this.DiscountCol.Name = "DiscountCol";
             // 
-            // ValueCol
+            // QuantityCol
             // 
-            this.ValueCol.HeaderText = "Стойност";
-            this.ValueCol.Name = "ValueCol";
+            this.QuantityCol.HeaderText = "Количества";
+            this.QuantityCol.Name = "QuantityCol";
+            // 
+            // UnitPriceCol
+            // 
+            this.UnitPriceCol.HeaderText = "Ед. цена";
+            this.UnitPriceCol.Name = "UnitPriceCol";
+            // 
+            // ItemCbCol
+            // 
+            this.ItemCbCol.HeaderText = "Артикул";
+            this.ItemCbCol.Name = "ItemCbCol";
+            this.ItemCbCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // salesInfoSys
             // 

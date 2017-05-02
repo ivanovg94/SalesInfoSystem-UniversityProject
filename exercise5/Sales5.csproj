@@ -71,6 +71,9 @@
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportSales.resx">
+      <DependentUpon>ReportSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>

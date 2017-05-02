@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -92,10 +93,11 @@ namespace exercise4_2
             ItemsGV.Rows.Clear();
         }
 
+
         private void списъкToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportSales form = new ReportSales();
-            form.Show();
+            ReportSales frm = new ReportSales(GetDataTableFromDGV(ItemsGV), totalPrice, totalDiscount);
+            frm.Show();
         }
 
         private void артикулиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -203,7 +205,7 @@ namespace exercise4_2
             }
             else
             {
-                e.Cancel=false;
+                e.Cancel = false;
             }
         }
 
@@ -217,7 +219,31 @@ namespace exercise4_2
             }
         }
 
+        private DataTable GetDataTableFromDGV(DataGridView dgv)
+        {
+            var dt = new DataTable();
+            foreach (DataGridViewColumn column in dgv.Columns)
+            {
+                if (column.Visible)
+                {
+                    // You could potentially name the column based on the DGV column name (beware of dupes)
+                    // or assign a type based on the data type of the data bound to this DGV column.
+                    dt.Columns.Add();
+                }
+            }
 
+            object[] cellValues = new object[dgv.Columns.Count];
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                for (int i = 0; i < row.Cells.Count; i++)
+                {
+                    cellValues[i] = row.Cells[i].Value;
+                }
+                dt.Rows.Add(cellValues);
+            }
+
+            return dt;
+        }
 
 
 
